@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("org.springframework.boot") version "3.1.0"
+    id("io.freefair.lombok") version "8.0.1"
 }
 
 group = "org.recipes"
@@ -19,6 +20,7 @@ allprojects {
         mavenCentral()
     }
     apply(plugin = "java-library")
+    apply(plugin = "io.freefair.lombok")
 
     java {
         toolchain {

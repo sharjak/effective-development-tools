@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./TestDataBase
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+
+server:
+  servlet:
+    context-path: /recipes-api
