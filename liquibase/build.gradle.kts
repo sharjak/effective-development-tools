@@ -16,7 +16,7 @@ liquibase {
         arguments = mapOf(
                 "changelogFile" to "/changelog.yaml",
                 "classpath" to "$projectDir/changelog",
-                "url" to (project.findProperty("liquibaseDbUrl") ?: "jdbc:h2:file:./TestDataBase"),
+                "url" to (project.findProperty("liquibaseDbUrl") ?: "jdbc:h2:file:$projectDir/liquibase/TestDataBase"),
                 "username" to (project.findProperty("liquibaseUser") ?: "sa"),
                 "password" to (project.findProperty("liquibasePassword") ?: "password"),
                 "logLevel" to "info",
