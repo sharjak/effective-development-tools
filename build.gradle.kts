@@ -4,7 +4,7 @@ plugins {
     id("io.freefair.lombok") version "8.0.1"
 }
 
-group = "org.recipes"
+group = "edu.persons"
 version = "1.0-SNAPSHOT"
 
 dependencies {
@@ -12,7 +12,7 @@ dependencies {
 }
 
 springBoot {
-    mainClass.set("org.recipes.RecipesApi")
+    mainClass.set("edu.persons.PersonsApi")
 }
 
 allprojects {
