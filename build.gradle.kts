@@ -20,7 +20,6 @@ allprojects {
         mavenCentral()
     }
     apply(plugin = "java-library")
-    apply(plugin = "io.freefair.lombok")
 
     java {
         toolchain {
@@ -30,4 +29,23 @@ allprojects {
 
     apply(plugin = "org.springframework.boot")
     apply(plugin = "io.spring.dependency-management")
+    apply(plugin = "io.freefair.lombok")
+}
+
+subprojects {
+    tasks.jar {
+        enabled = true
+    }
+
+    tasks.bootJar {
+        enabled = false
+    }
+
+    tasks.bootRun {
+        enabled = false
+    }
+
+    tasks.bootBuildImage {
+        enabled = false
+    }
 }
