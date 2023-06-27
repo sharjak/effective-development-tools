@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-person-address-table
+      author: sander.harjak@nortal.com
+      changes:
+        - createTable:
+            tableName: person_address
+            remarks: Person address table
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  remarks: (technical field) primary key
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: person_id
+                  type: uuid
+                  remarks: (tehniline väli) reference to person table
+                  constraints:
+                    references: person (id)
+                    foreignKeyName: person_id_fkey
+                    nullable: false
+              - column:
+                  name: city
+                  type: text
+                  remarks: Person address city
+              - column:
+                  name: street
+                  type: text
+                  remarks: Person address street
+              - column:
+                  name: postal_code
+                  type: text
+                  remarks: Person address postal code
+              - column:
+                  name: country
+                  type: text
+                  remarks: Person address country
+
