@@ -11,4 +11,6 @@ public class Person {
     private UUID id;
     private String firstName;
     private String lastName;
+    private String address;
+    private String gender;
 }
