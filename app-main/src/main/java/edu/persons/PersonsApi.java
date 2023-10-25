@@ -3,13 +3,12 @@ package edu.persons;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = { "edu.persons.*" })
 @EntityScan(basePackages = "edu.persons.*")
-public class PersonsApi extends SpringBootServletInitializer {
+public class PersonsApi {
     public static void main(String[] args) {
         SpringApplication.run(PersonsApi.class, args);
     }

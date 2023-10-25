@@ -15,15 +15,10 @@ import java.util.List;
 @Validated
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/demo")
-public class DemoController {
+@RequestMapping("/demo2")
+public class Demo2Controller {
     private final FetchFibonacciSequenceUseCase fetchFibonacciSequenceUseCase;
     private final FetchFibonacciNthElementUseCase fetchFibonacciNthElementUseCase;
-
-    @GetMapping("/hello-world")
-    public ResponseEntity<String> helloWorld() {
-        return ResponseEntity.ok("Hello world!");
-    }
 
     @GetMapping("/fibonacci")
     public ResponseEntity<List<BigInteger>> fetchFibonacciSequence(@RequestParam @Min(0) @Max(100) Integer fibonacciCount) {
