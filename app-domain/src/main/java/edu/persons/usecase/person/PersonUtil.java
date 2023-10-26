@@ -1,4 +1,4 @@
-package edu.persons.usecase.demo.person;
+package edu.persons.usecase.person;
 
 import lombok.experimental.UtilityClass;
 import edu.persons.model.person.Person;

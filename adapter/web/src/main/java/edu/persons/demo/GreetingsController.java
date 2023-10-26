@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@RequestMapping("/demo1/hello")
-public class Demo1Controller {
+@RequestMapping("/demo/greetings")
+public class GreetingsController {
     private static final String DEFAULT_GREETING = "Hello world!";
     private static final Map<Integer, String> GREETINGS_MAP = new HashMap<>(Map.of(1, "Greetings, Universe!",
             2, "Welcome, New Beginnings!",
